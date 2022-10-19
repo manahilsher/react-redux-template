@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchStuffsThunk } from '../store/actions';
 
 const Home = props => {
-  useEffect(props => {
+  useEffect(() => {
     const fetchData = async () => {
       props.fetchStuffsThunk();
     };
