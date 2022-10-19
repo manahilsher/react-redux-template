@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchStuffsThunk } from '../store/actions';
 
 const Home = props => {
-  useEffect(() => {
+  useEffect(props => {
     const fetchData = async () => {
       props.fetchStuffsThunk();
     };
@@ -14,7 +14,7 @@ const Home = props => {
   return (
     <div>
       <div>Home</div>
-      {typeof props.stuffs === undefined ? (
+      {typeof props.stuffs === 'undefined' ? (
         <p>Loading...</p>
       ) : (
         props.stuffs.map((stuff, i) => <p key={i}>{stuff}</p>)
