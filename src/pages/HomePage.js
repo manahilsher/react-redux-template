@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { fetchStuffsThunk } from '../store/actions';
 
-const Home = props => {
+const HomePage = props => {
   useEffect(() => {
     const fetchData = async () => {
       props.fetchStuffsThunk();
@@ -13,7 +13,7 @@ const Home = props => {
 
   return (
     <div>
-      <div>Home</div>
+      <div>HomePage</div>
       {typeof props.stuffs === 'undefined' ? (
         <p>Loading...</p>
       ) : (
@@ -24,10 +24,10 @@ const Home = props => {
 };
 const mapState = state => {
   return {
-    stuffs: state.stuffsReducer.stuffs
+    stuffs: state.stuffReducer.stuffs
   };
 };
 
 export default connect(mapState, {
   fetchStuffsThunk
-})(Home);
+})(HomePage);

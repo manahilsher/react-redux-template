@@ -1,22 +1,21 @@
 import {
   FETCH_STUFFS
+  // FETCH_STUFF,
   // CREATE_STUFF,
-  // FETCH_STUFF
   // UPDATE_STUFF,
   // DELETE_STUFF
 } from '../actions/types';
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default (state = { stuffs: [] }, action) => {
   switch (action.type) {
     case FETCH_STUFFS:
       return { ...state, stuffs: action.payload };
+    // case FETCH_STUFF:
+    //   return { ...state, selectedStuff: action.payload };
     // case CREATE_STUFF:
     //   let newStateWithCreatedStuff = { ...state };
     //   newStateWithCreatedStuff.stuffs.push(action.payload);
     //   return newStateWithCreatedStuff;
-    // case FETCH_STUFF:
-    //   return { ...state, selectedStuff: action.payload };
     // case UPDATE_STUFF:
     //   let newStateWithUpdatedStuff = { ...state };
     //   let stuffIdx = state.stuffs.findIndex(a => a.id === action.payload.id);

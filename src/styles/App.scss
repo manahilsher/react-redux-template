@@ -1,0 +1,12 @@
+$primary-color: rgb(81, 81, 217);
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    @include flex-center;
+    background-color: $primary-color;
+}
