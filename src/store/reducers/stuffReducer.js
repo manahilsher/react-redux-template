@@ -6,7 +6,7 @@ import {
   // DELETE_STUFF
 } from '../actions/types';
 
-export default (state = { stuffs: [] }, action) => {
+const stuffReducer = (state = { stuffs: [] }, action) => {
   switch (action.type) {
     case FETCH_STUFFS:
       return { ...state, stuffs: action.payload };
@@ -29,3 +29,5 @@ export default (state = { stuffs: [] }, action) => {
       return state;
   }
 };
+
+export default stuffReducer;
